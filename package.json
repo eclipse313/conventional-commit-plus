@@ -1,0 +1,16 @@
+{
+  "name": "@eclipse313/conventional-commit-plus",
+  "version": "1.0.0",
+  "description": "Commitlint Configuration for Conventional Commits with Emojis",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eclipse313/conventional-commit-plus.git"
+  },
+  "author": "eclipse313",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eclipse313/conventional-commit-plus/issues"
+  },
+  "homepage": "https://github.com/eclipse313/conventional-commit-plus#readme"
+}
