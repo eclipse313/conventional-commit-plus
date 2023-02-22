@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Declare emojis
+emojis=("🏗️" "🔧" "👷" "📚" "✨" "🐛" "🏎" "♻️" "⏪️" "🎨" "🧪" "🚧")
+types=("build" "chore" "ci" "docs" "feat" "fix" "perf" "refactor" "revert" "style" "test" "wip")
+
+# Get header and body from commit message
+header="$(head -n 1 $1)";
+body="$(tail -n +2 $1)";
+
+# Loop through all types
+for key in "${!types[@]}"; do
+
+    # Check, if emoji is already present
+    if [[ "$header" == *"${types[key]}"* ]] && [[ "$header" == *"${emojis[key]}"* ]]; then
+    	exit 0;
+    fi
+
+    # Add emoji to commit message
+    if [[ "$header" == *"${types[key]}"* ]] && [[ "$header" != *"${emojis[key]}"* ]]; then
+    	printf "$header ${emojis[key]}\n$body" > $1
+    	exit 0;
+    fi
+
+done
