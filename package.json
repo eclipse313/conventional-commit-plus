@@ -1,6 +1,6 @@
 {
   "name": "@eclipse313/conventional-commit-plus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Commitlint Configuration for Conventional Commits with Emojis",
   "main": "index.js",
   "repository": {
